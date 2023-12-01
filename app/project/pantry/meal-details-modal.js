@@ -6,7 +6,16 @@ export default function MealDetailsModal({ meal, onClose }) {
         <div className="modal-box w-11/12 max-w-5xl bg-stone-100">
           <div className="flex flex-col items-center text-center">
             <h3 className="font-bold text-xl mb-4">{meal.strMeal}</h3>
-            <Image src={meal.strMealThumb} alt={meal.strMeal} layout="fill" />
+            <div className="w-full mb-4"> 
+              <div style={{ position: 'relative', width: '100%', height: '0', paddingBottom: '56.25%' }}>
+                <Image 
+                  src={meal.strMealThumb} 
+                  alt={meal.strMeal} 
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            </div>
           </div>
   
           <p className="py-4">{meal.strInstructions}</p>
