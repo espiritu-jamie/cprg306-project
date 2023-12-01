@@ -23,16 +23,16 @@ export default function Pantry() {
     await firebaseSignOut();
   }
 
-  async function loadPantryItems() {
-    const items = await getItems(user.uid);
-    setPantryItems(items);
-  }
-
   useEffect(() => {
+    async function loadPantryItems() {
+      const items = await getItems(user.uid);
+      setPantryItems(items);
+    }
+  
     if (user) {
       loadPantryItems();
     }
-  }, [user?.uid]);
+  }, [user]);
 
   const handleItemSelect = (ingredientName, isChecked) => {
     setSelectedIngredients(prevIngredients => {

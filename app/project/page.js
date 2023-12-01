@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <main className="container mx-auto p-4 min-h-screen flex flex-col justify-center items-center">
       <h1 className="text-center text-4xl font-bold my-6">
-        What's in My Pantry?
+        What&apos;s in My Pantry?
       </h1>
       <div className="bg-stone-100 p-6 rounded-lg shadow-lg text-center max-w-md w-full overflow-hidden">
         {user ? (
